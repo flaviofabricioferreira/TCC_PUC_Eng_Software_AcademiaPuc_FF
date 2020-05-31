@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt_br" xmlns:th="http://www.thymeleaf.org">
+	<head> <!-- Início do Header  -->
+	    <meta charset="utf-8"/>
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+	    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+   	     <!-- Bootstrap CSS -->
+    	<link rel="stylesheet" href="/webjars/bootstrap/css/bootstrap.min.css">
+	    <link rel="stylesheet" href="css/puc.css"/>
+		<script src="https://kit.fontawesome.com/59d868f5b6.js" crossorigin="anonymous"></script>		
+		<title>TCC PUC Fabricio</title>	
+	</head>	<!-- Fim do Header  -->
+	
+	<body>	<!-- Início do Body  -->
+		<div class="container-fluid">
+			<h1 class="text-center"><u>Academia PUC</u></h1>
+		
+			<!-- Container de Links da Barra de Navegação do HTML  -->
+			<div class="navegadorSuperior">
+				<a class="active"><i class="fas fa-user-cog"></i> <u>Área do Empregado(a) : Lista de Alunos</u></a>
+				<div class="navegadorSuperior-right">
+					<a href="/FormulariodeCadastroAluno"><i class="fas fa-user-edit"></i> Cadastrar Novo Aluno(a)</a>
+					<a href="/"><i class="fas fa-home"></i> Retornar ao Início</a>
+				</div>
+			</div>
+		
+			<br>
+		
+		    <!-- Tabela de exibição da lista de alunos cadastrados no banco de dados 
+			Adicionado ainda, nas duas últimas colunas, links para funções de 
+			cadastro de presença do aluno e exibição da lista de presenças do aluno. 
+			-->
+			<table class="table table-striped">
+				<thead>
+					<tr>
+						<th>ID</th>
+						<th>Nome</th>
+						<th>Número Matrícula</th>
+						<th>CPF</th>
+						<th>RG</th>
+						<th>Endereco</th>
+						<th>Ações</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr	th:each="aluno: ${listadeAlunos}">
+						<td th:text="${aluno.id}">ID</td>
+						<td th:text="${aluno.nome}">Nome</td>
+						<td th:text="${aluno.matricula}">Número Matrícula</td>
+						<td th:text="${aluno.cpf}">CPF</td>
+						<td th:text="${aluno.rg}">RG</td>
+						<td th:text="${aluno.endereco}">Endereco</td>
+						<td><a th:href="@{/listarPresencasAluno(id=${aluno.id})}"><i class="fas fa-chart-pie"></i> <i class="fas fa-chart-bar"></i> Visualizar Estatisticas de Presença</a></td>	
+					</tr>
+				</tbody>
+			</table>
+		
+			<!-- Rodapé -->
+			<footer>
+            	<p class="text-muted">@Copyright 2020 PUC</p>
+			</footer>
+		</div>		
+	</body> <!-- Final do Body  -->
+</html> <!-- Final do HTML  -->

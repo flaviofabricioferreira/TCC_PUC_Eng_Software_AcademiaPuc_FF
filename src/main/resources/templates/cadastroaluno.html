@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt_br" xmlns:th="http://www.thymeleaf.org"> <!-- Inicio do HTML  -->
+
+	<head> <!-- Início do Header  -->  
+	    <meta charset="utf-8"/>
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+	    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+	     <!-- Bootstrap CSS -->
+    	<link rel="stylesheet" href="/webjars/bootstrap/css/bootstrap.min.css">
+	    <link rel="stylesheet" href="css/puc.css"/>
+		<script src="https://kit.fontawesome.com/59d868f5b6.js" crossorigin="anonymous"></script>
+		<title>Cadastro de Aluno</title> <!-- Titulo Aba do Site -->
+	
+	</head>	<!-- Fim do Header  -->
+
+	<body>	<!-- Início do Body  -->
+		<div class="container-fluid">
+			<h1 class="text-center"><u>Academia PUC</u></h1>
+			
+			<!-- Container de Links da Barra de Navegação do HTML  -->
+			<div class="navegadorSuperior">
+				<a class="active"><i class="fas fa-user-cog"></i> Área do Empregado: Cadastro de Aluno</a>
+				<div class="navegadorSuperior-right">
+					<a class="navegadorSuperior-right" href="/"><i class="fas fa-home"></i> Retornar ao Início</a>
+				</div>
+			</div>
+			
+			<br>
+			
+			<!-- Formulário com campos para Cadastro de Aluno 
+			Quando o botão enviar for acionado será chamada a função /cadastrarAluno
+			com o método post, passando como argumento o objeto aluno com os seu 
+			respectivos parâmetros atribuidos de acordo com a entrada do usuário.-->
+			<form action="#" th:action="@{/cadastrarAluno}" method="post" 
+			th:object="${aluno}">
+				<div class="form-group">
+					<label for="nome">Nome</label>
+					<input type="text" class="form-control" th:field="*{nome}" placeholder="e.g. Fulano de Tal">
+				</div>
+				<div class="form-group">
+					<label for="nome">Matrícula</label>
+					<input type="number" class="form-control" th:field="*{matricula}" placeholder="1234567">
+				</div>
+				<div class="form-group">
+					<label for="nome">CPF</label>
+					<input type="text" class="form-control" th:field="*{cpf}" placeholder="000.000.000-00">
+				</div>
+				<div class="form-group">
+					<label for="nome">RG</label>
+					<input type="text" class="form-control" th:field="*{rg}" placeholder="00000-SSP UF">
+				</div>				
+				<div class="form-group">
+					<label for="nome">Endereço</label>
+					<input type="text" class="form-control" th:field="*{endereco}" placeholder="Rua Nascimento e Silva, 107">
+				</div>				
+				<button class="btn btn-success" type="submit"><i class="fas fa-paper-plane"></i> Enviar</button></p>		
+			
+			</form><!-- Fim do Formulário  -->	
+		
+			<!-- Rodapé -->
+			<footer>
+            	<p class="text-muted">@Copyright 2020 PUC</p>
+			</footer>
+		</div>
+	</body> <!-- Final do Body  -->
+</html>	<!-- Final do HTML  -->

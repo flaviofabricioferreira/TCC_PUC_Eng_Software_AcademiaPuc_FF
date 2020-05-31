@@ -1,0 +1,28 @@
+.navegadorSuperior {
+	overflow:hidden;
+	background-color: #000080; /*-- Navy */
+}
+		
+.navegadorSuperior a{
+	float: left;
+ 	color: #f2f2f2;
+ 	text-align: center;
+ 	padding: 14px 16px;
+ 	text-decoration: none;
+	font-size: 17px;
+}
+		
+/*-- Estilo selecionado ao Passar o Mouse por cima do Link.*/		
+.navegadorSuperior a:hover { 
+	background-color: #B0C4DE; /*-- LightSteelBlue */
+	color: blue;
+}
+		
+.navegadorSuperior a.active {
+	background-color: #4169E1; /*-- RoyalBlue */
+	color: white;
+}
+		
+.navegadorSuperior-right {
+	float: right;
+}

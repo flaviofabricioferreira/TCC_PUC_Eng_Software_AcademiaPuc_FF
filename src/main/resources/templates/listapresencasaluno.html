@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt_br" xmlns:th="http://www.thymeleaf.org"> <!-- Inicio do HTML  -->
+	
+	<head> <!-- Início do Header  -->
+	    <meta charset="utf-8"/>
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+	    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+   	     <!-- Bootstrap CSS -->
+    	<link rel="stylesheet" href="/webjars/bootstrap/css/bootstrap.min.css">
+	    <link rel="stylesheet" href="css/puc.css"/>
+		<title>Lista de Presencas</title>
+	
+		<script src="/webjars/jquery/jquery.min.js"></script>
+		<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
+		<!--  
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+		-->
+		<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>	
+		<script src="https://kit.fontawesome.com/59d868f5b6.js" crossorigin="anonymous"></script>	
+	</head> <!-- Fim do Header  -->	
+
+	<body>	<!-- Início do Body  -->
+		<div class="container-fluid">
+			<h1 class="text-center"><u>Academia PUC</u></h1>
+			
+			<!-- Container de Links da Barra de Navegação do HTML  -->
+			<div class="navegadorSuperior">
+				<a class="active"><i class="fas fa-user-cog"></i></a>			
+				<a class="active"><u>Área do Empregado(a) - Lista de Presencas do(a) Aluno(a):</u></a>
+				<a class="active" th:text="${alunoX.nome}"><u><b></b></u></a>
+				<a class="active"><i class="fas fa-user"></i></a>
+				<div class="navegadorSuperior-right">
+					<a href="/listarAlunos"><i class="fas fa-users"></i> Listar Alunos</a>
+					<a href="/"><i class="fas fa-home"></i> Retornar ao Início</a>
+				</div>
+			</div>
+			<!-- Tabela de exibição da lista de presenças cadastradas no banco de dados 
+			de um aluno específico.-->
+			<br>	
+			<div class="row">
+		  		<div class="col-2">     
+			        <h3><b><u>Tabela de Presenças</u></b></h3>
+			        <table class="table table-striped table-sm">
+			        	<thead>
+							<tr>
+								<th class="text-center">Data da Presença</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr	th:each="alunoX: ${alunoX.getListaPresencas()}">
+								<td class="text-center" th:text="${#strings.toUpperCase(#dates.format(alunoX.dataPresenca, 'dd.MMM.yyyy HH:mm'))}">Data da Presença</td>
+							</tr>
+						</tbody>
+					</table>
+		        </div>
+		        
+		 		<div class="col-10"> 
+					<h3><b><u>Estatísticas da Presença</b></u></h3>
+		        	<div >
+				        <div id="chart_div" style="height: 500px;"></div>
+		<!-- 				<div id="piechart" style="width: 900px; height: 500px;"></div> -->
+						<div id="piechart" style="height: 500px;"></div>
+						
+				    </div>   	    
+				    <script th:inline="javascript">
+				        var real_data = /*[[${chartData}]]*/'noValue';
+				 
+				        $(document).ready(function() {
+				            google.charts.load('current', {
+				                packages : [ 'corechart', 'bar' ]
+				            });
+				            google.charts.setOnLoadCallback(drawColumnChart);
+				            google.charts.setOnLoadCallback(drawPieChart);
+				        });
+				 
+				        function drawColumnChart() {
+				            var data = new google.visualization.DataTable();
+				            data.addColumn('string', 'Year');
+				            data.addColumn('number', 'Presenças');
+				            Object.keys(real_data).forEach(function(key) {
+				                data.addRow([ key, real_data[key] ]);
+				            });
+				            var options = {
+				                title : 'Histórico Anual de Presenças do Aluno',
+				                hAxis : {
+				                    title : 'Anos',
+				                },
+				                vAxis : {
+				                    title : 'Presenças',
+				                    minValue: 0
+				                }
+				            };
+				            var chart = new google.visualization.ColumnChart(document
+				                    .getElementById('chart_div'));
+				            chart.draw(data, options);
+				        }
+				 
+				        function drawPieChart() {
+				            var data = new google.visualization.DataTable();
+				            data.addColumn('string', 'Year');
+				            data.addColumn('number', 'Views');
+				            Object.keys(real_data).forEach(function(key) {
+				                data.addRow([ key, real_data[key] ]);
+				            });
+				            var options = {
+				                title : 'Distribuição de Presenças do Aluno por Ano'
+				            };
+				            var chart = new google.visualization.PieChart(document
+				                    .getElementById('piechart'));
+				            chart.draw(data, options);
+				        }
+				    </script>
+		        
+		        </div>
+		    
+		    </div>
+			
+			<!-- Rodapé -->
+			<footer>
+            	<p class="text-muted">@Copyright 2020 PUC</p>
+			</footer>
+		</div>
+	</body> <!-- Final do Body  -->
+</html> <!-- Final do HTML  -->
