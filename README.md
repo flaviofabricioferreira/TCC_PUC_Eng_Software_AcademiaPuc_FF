@@ -29,7 +29,7 @@ Passo 4 : Digitar `mvnw.cmd spring-boot:run`
 
 Passo 4.1 : Se identificar erro relatio a váriavel de ambiente JAVA_HOME, seguir os passos do tutorial [Seeting Java_Home Variable in Windows.](https://confluence.atlassian.com/doc/setting-the-java_home-variable-in-windows-8895.html)
 
-Passo 5 : Abrir um WebBrowser e entrar em ![localhost:8083](localhost:8083)
+Passo 5 : Abrir um WebBrowser e entrar em [http://localhost:8083](http://localhost:8083)
 
 # ScreenShots: 
 
