@@ -23,41 +23,35 @@ Passo 1 : Clone ou Download Codigo
 
 Passo 2 : Abrir o Command Prompt (CMD)
 
-Passo 3 : Digitar cd FlavioFabricio-TCC-PUC-ENG-SOFTWARE
+Passo 3 : Acessar pasta onde foi baixado e digitar `cd FlavioFabricio-TCC-PUC-ENG-SOFTWARE`
 
-Passo 4 : Digitar dir 
+Passo 4 : Digitar `mvnw.cmd spring-boot:run`
 
-Passo 5 : Digitar mvnw.cmd clean compile
+Passo 4.1 : Se identificar erro relatio a váriavel de ambiente JAVA_HOME, seguir os passos do tutorial [Seeting Java_Home Variable in Windows.](https://confluence.atlassian.com/doc/setting-the-java_home-variable-in-windows-8895.html)
 
-Passo 5.1 : Se identificar erro relatio a váriavel de ambiente JAVA_HOME, seguir os passos do tutorial [Seeting Java_Home Variable in Windows.](https://confluence.atlassian.com/doc/setting-the-java_home-variable-in-windows-8895.html)
-
-Passo 6 : Digitar mvnw.cmd spring-boot:run
-
-Passo 7 : Abrir um WebBrownser e entrar com localhost:8083
-
+Passo 5 : Abrir um WebBrowser e entrar em ![localhost:8083](localhost:8083)
 
 # ScreenShots: 
 
 ##### Screenshot 1:
 
-![Screenshot 1](https://github.com/flaviofabricioferreira/TCC_PUC_Eng_Software_AcademiaPuc_FF/blob/master/FlavioFabricio-TCC-PUC-ENG-SOFTWARE/Docs/screenshot1.png)
+![Screenshot 1](https://github.com/flaviofabricioferreira/TCC_PUC_Eng_Software_AcademiaPuc_FF/blob/master/docs/screenshots/screenshot1.png)
 
 ##### Screenshot 2:
 
-![Screenshot 2](https://github.com/flaviofabricioferreira/TCC_PUC_Eng_Software_AcademiaPuc_FF/blob/master/FlavioFabricio-TCC-PUC-ENG-SOFTWARE/Docs/screenshot2.png)
+![Screenshot 2](https://github.com/flaviofabricioferreira/TCC_PUC_Eng_Software_AcademiaPuc_FF/blob/master/docs/screenshots/screenshot2.png)
 
 ##### Screenshot 3:
 
-![Screenshot 3](https://github.com/flaviofabricioferreira/TCC_PUC_Eng_Software_AcademiaPuc_FF/blob/master/FlavioFabricio-TCC-PUC-ENG-SOFTWARE/Docs/screenshot3.png)
+![Screenshot 3](https://github.com/flaviofabricioferreira/TCC_PUC_Eng_Software_AcademiaPuc_FF/blob/master/docs/screenshots/screenshot3.png)
 
 ##### Screenshot 4:
 
-![Screenshot 4](https://github.com/flaviofabricioferreira/TCC_PUC_Eng_Software_AcademiaPuc_FF/blob/master/FlavioFabricio-TCC-PUC-ENG-SOFTWARE/Docs/screenshot4.png)
+![Screenshot 4](https://github.com/flaviofabricioferreira/TCC_PUC_Eng_Software_AcademiaPuc_FF/blob/master/docs/screenshots/screenshot4.png)
 
 ##### Screenshot 5:
 
-![Screenshot 5](https://github.com/flaviofabricioferreira/TCC_PUC_Eng_Software_AcademiaPuc_FF/blob/master/FlavioFabricio-TCC-PUC-ENG-SOFTWARE/Docs/screenshot5.png)
-
+![Screenshot 5](https://github.com/flaviofabricioferreira/TCC_PUC_Eng_Software_AcademiaPuc_FF/blob/master/docs/screenshots/screenshot5.png)
 
 
 # Links de Referência: 
@@ -77,5 +71,14 @@ Passo 7 : Abrir um WebBrownser e entrar com localhost:8083
 [Tabela de Cores HTML](https://celke.com.br/artigo/tabela-de-cores-html-nome-hexadecimal-rgb)
 
 [GitHub ReadMe Syntax](https://help.github.com/en/github/writing-on-github/basic-writing-and-formatting-syntax)
+
+[Front-End Open Source Toolkit](https://getbootstrap.com/)
+
+[How to Add Bootstrap on Spring Application](https://meet.google.com/linkredirect?authuser=0&dest=https%3A%2F%2Fwww.baeldung.com%2Fmaven-webjars)
+
+[Maven Repositories](https://mvnrepository.com/)
+
+[Web Icon Set/Toolkit](https://fontawesome.com/)
+
 
 
