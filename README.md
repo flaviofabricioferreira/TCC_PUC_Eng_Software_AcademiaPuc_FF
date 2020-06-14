@@ -1,7 +1,6 @@
 # Projeto AcademiaPuc - TCC Pós Graduação Engenharia de Software PUC Minas
 
-Projeto referente a implementação do Trabalho de Conclusão de Curso (TCC) 
-do curso de especialização em  Engenharia de Software da PUC Minas Virtual. 
+Projeto referente a implementação do Trabalho de Conclusão de Curso [(TCC)](https://github.com/flaviofabricioferreira/TCC_PUC_Eng_Software_AcademiaPuc_FF/blob/master/docs/TCC_2020_Eng_Software_Trabalho_Puc_Minas_Flavio_Fabricio_vFinal_2.pdf) do curso de especialização em  Engenharia de Software da PUC Minas Virtual. 
  
 Data de Entrega = 31/Maio/2020
  
